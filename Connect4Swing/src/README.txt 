@@ -1,0 +1,74 @@
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+CIS 120 Game Project README
+PennKey: _______
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+
+===================
+=: Core Concepts :=
+===================
+
+- List the four core concepts, the features they implement, and why each feature
+  is an appropriate use of the concept. Incorporate the feedback you got after
+  submitting your proposal.
+
+  1. JUnit - this is appropriate because I should be able to test whether or not my 
+  functions works properly on my 2D array. I tested cases where player 1 wins, player
+  2 wins, etc
+     
+
+  2. File I/O - this is a menu option where you can save your game so that you 
+  can play again in the future if you want to. You would go to file --> save. There is
+  also a load option for you to load your .txt file.
+
+  3. 2-D Array - A 2D array of type Tiles. This stores individual Tiles. Since the
+  game board itself closely resembles a 2D array, it makes sense to have this functionality.
+
+  4. Collections - A menu option using ArrayList to store player's moves. It removes the
+  most recent moves. This is an appropriate concept since we know that mistakes can
+  occur with Connect Four. A player should be able to undo a move. 
+
+
+=========================
+=: Your Implementation :=
+=========================
+
+- Provide an overview of each of the classes in your code, and what their
+  function is in the overall game.
+  
+  I have three classes. Tiles.java, GameBoard.java, Game.java. The Tiles.java class
+  is meant to create the individual tiles for the game board. The game board class 
+  contains all of the logical methods, ones that check for row, column, and diagonals.
+  Additionally, it has the logic for undo button, load, and save. The Game.java is
+  the main method that run the game. 
+
+
+- Were there any significant stumbling blocks while you were implementing your
+  game (related to your design, or otherwise)?
+  
+  Yes. At first I had two 2-D arrays. One 2-D array of Tiles type and another
+  2-D array to keep track of which player's tiles have populated the board. I 
+  later realized that this was a bit redundant, as I can just keep track of 
+  players on the 2-D array of Tiles and also my methods that check for the winner.
+  Players are able to populate the board just by knowing which column they are 
+  clicking.
+
+
+
+
+- Evaluate your design. Is there a good separation of functionality? How well is
+  private state encapsulated? What would you refactor, if given the chance?
+  
+  I'm not sure what I would refactor, as I believe that it is encapsulated well;
+  however, I would have maybe included a panel that prompts which player's turn it 
+  is.
+
+
+
+========================
+=: External Resources :=
+========================
+
+- Cite any external resources (libraries, images, tutorials, etc.) that you may
+  have used while implementing your game.
+  
+  N/a
